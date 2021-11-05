@@ -4,7 +4,7 @@ category:
   - logging
 type: catalog
 scope:
-  - workspace
+  - project
 certifications:
 overview: |-
   # Overview
