@@ -5,7 +5,7 @@ metadata:
     apps.kommander.d2iq.io/category: security
     apps.kommander.d2iq.io/description: Keycloak is an open source identity and access management for modern applications and services.
     apps.kommander.d2iq.io/display-name: Keycloak
-    apps.kommander.d2iq.io/scope: workspace
+    apps.kommander.d2iq.io/scope: project
     apps.kommander.d2iq.io/type: custom
     apps.kommander.d2iq.io/overview: |-
      # Overview
@@ -21,6 +21,6 @@ spec:
   appId: keycloak
   gitRepositoryRef:
     kind: GitRepository
-    name: management
-    namespace: kommander-flux
+    name: demo-project-repo
+    namespace: demo
   version: 15.1.0

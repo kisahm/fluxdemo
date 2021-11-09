@@ -1,0 +1,118 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  annotations:
+    helm.sh/hook: post-install
+    helm.sh/hook-delete-policy: before-hook-creation,hook-failed
+    helm.sh/hook-weight: "40"
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"kustomize.toolkit.fluxcd.io/v1beta1","kind":"Kustomization","metadata":{"annotations":{"kustomize.toolkit.fluxcd.io/checksum":"a14dac790ac090c21e3097408d1b1b930db37b8c"},"creationTimestamp":null,"labels":{"kustomize.toolkit.fluxcd.io/name":"management-cluster","kustomize.toolkit.fluxcd.io/namespace":"kommander"},"name":"kommander-flux-0.17.2-defaults","namespace":"kommander"},"spec":{"interval":"15s","path":"./services/kommander-flux/0.17.2/defaults","postBuild":{"substitute":{"releaseNamespace":"kommander","traefikNamespace":"kommander","workspaceNamespace":"kommander"},"substituteFrom":[{"kind":"ConfigMap","name":"substitution-vars"},{"kind":"ConfigMap","name":"kommander-vars"},{"kind":"ConfigMap","name":"helm-repository-vars"}]},"prune":true,"sourceRef":{"kind":"GitRepository","name":"management","namespace":"kommander-flux"}},"status":{}}
+    kustomize.toolkit.fluxcd.io/checksum: a14dac790ac090c21e3097408d1b1b930db37b8c
+  creationTimestamp: "2021-11-09T19:20:35Z"
+  finalizers:
+  - finalizers.fluxcd.io
+  generation: 1
+  labels:
+    kustomize.toolkit.fluxcd.io/name: management-cluster
+    kustomize.toolkit.fluxcd.io/namespace: kommander
+  managedFields:
+  - apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:helm.sh/hook: {}
+          f:helm.sh/hook-delete-policy: {}
+          f:helm.sh/hook-weight: {}
+      f:spec:
+        .: {}
+        f:force: {}
+        f:interval: {}
+        f:path: {}
+        f:postBuild:
+          .: {}
+          f:substitute:
+            .: {}
+            f:namespace: {}
+            f:releaseNamespace: {}
+            f:traefikNamespace: {}
+            f:workspaceNamespace: {}
+          f:substituteFrom: {}
+        f:prune: {}
+        f:sourceRef:
+          .: {}
+          f:kind: {}
+          f:name: {}
+          f:namespace: {}
+    manager: helm
+    operation: Update
+    time: "2021-11-09T19:20:35Z"
+  - apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+          f:kustomize.toolkit.fluxcd.io/checksum: {}
+        f:finalizers:
+          .: {}
+          v:"finalizers.fluxcd.io": {}
+        f:labels:
+          .: {}
+          f:kustomize.toolkit.fluxcd.io/name: {}
+          f:kustomize.toolkit.fluxcd.io/namespace: {}
+      f:status:
+        f:conditions: {}
+        f:lastAppliedRevision: {}
+        f:lastAttemptedRevision: {}
+        f:observedGeneration: {}
+        f:snapshot:
+          .: {}
+          f:checksum: {}
+          f:entries: {}
+    manager: kustomize-controller
+    operation: Update
+    time: "2021-11-09T19:21:49Z"
+  name: kommander-flux-0.17.2-defaults
+  namespace: kommander
+  resourceVersion: "264464"
+  uid: 45286fe0-8cb8-4d20-9f3c-aa2ff3a30601
+spec:
+  force: false
+  interval: 15s
+  path: ./services/kommander-flux/0.17.2/defaults
+  postBuild:
+    substitute:
+      namespace: kommander
+      releaseNamespace: kommander
+      traefikNamespace: kommander
+      workspaceNamespace: kommander
+    substituteFrom:
+    - kind: ConfigMap
+      name: substitution-vars
+    - kind: ConfigMap
+      name: kommander-vars
+    - kind: ConfigMap
+      name: helm-repository-vars
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: management
+    namespace: kommander-flux
+status:
+  conditions:
+  - lastTransitionTime: "2021-11-09T23:09:51Z"
+    message: 'Applied revision: master/f32736e151df3c9302454ca2a08940d3b7d86478'
+    reason: ReconciliationSucceeded
+    status: "True"
+    type: Ready
+  lastAppliedRevision: master/f32736e151df3c9302454ca2a08940d3b7d86478
+  lastAttemptedRevision: master/f32736e151df3c9302454ca2a08940d3b7d86478
+  observedGeneration: 1
+  snapshot:
+    checksum: 6fa769d5a13fa8c3733975a4f97a84b22515e111
+    entries:
+    - kinds:
+        /v1, Kind=ConfigMap: ConfigMap
+      namespace: kommander
