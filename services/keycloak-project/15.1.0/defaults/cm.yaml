@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: keycloak-15.1.0-defaults
+  name: keycloak-15.1.0-project-defaults
   namespace: ${releaseNamespace}
 data:
   values.yaml: |-

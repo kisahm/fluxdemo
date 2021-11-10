@@ -4,7 +4,7 @@ category:
   - security
 type: catalog
 scope:
-  - workspace
+  - project
 certifications:
 overview: |-
   # Overview
