@@ -16,6 +16,6 @@ spec:
   appId: elasticsearch-project
   gitRepositoryRef:
     kind: GitRepository
-    name: demo-project-repo
+    name: fluxdemo
     namespace: demo
   version: 2.0.0

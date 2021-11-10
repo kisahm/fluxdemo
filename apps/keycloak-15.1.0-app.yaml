@@ -21,6 +21,6 @@ spec:
   appId: keycloak
   gitRepositoryRef:
     kind: GitRepository
-    name: demo-project-repo
+    name: fluxdemo
     namespace: demo
   version: 15.1.0
