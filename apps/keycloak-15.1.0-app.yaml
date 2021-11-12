@@ -22,5 +22,5 @@ spec:
   gitRepositoryRef:
     kind: GitRepository
     name: fluxdemo
-    namespace: demo
+    namespace: demonew
   version: 15.1.0
