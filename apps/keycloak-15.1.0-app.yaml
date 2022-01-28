@@ -1,4 +1,4 @@
-apiVersion: apps.kommander.d2iq.io/v1alpha1
+apiVersion: apps.kommander.d2iq.io/v1alpha2
 kind: App
 metadata:
   annotations:

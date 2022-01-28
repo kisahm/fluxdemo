@@ -26,6 +26,7 @@ Follow the steps given here to deploy custom apps bundled with this repo.
 
    ```
    export KUBECONFIG=admin.conf
+   export GIT_SSL_NO_VERIFY=true
    ```
 
 2. Get the details of the git repository hosted in the cluster to manange flux resources. This will print the git repo url and the credentials to be used to access that.
@@ -39,18 +40,13 @@ Follow the steps given here to deploy custom apps bundled with this repo.
    ```
    e.g:
    git clone https://a17664e980b634238b403e5003c2baf9-439434263.us-west-2.elb.amazonaws.com/dkp/kommander/git/kommander/kommander.git
-   ```
-
-WITHOUT SSL TRUST:
-   ```
-   GIT_SSL_NO_VERIFY=true git clone https://a17664e980b634238b403e5003c2baf9-439434263.us-west-2.elb.amazonaws.com/dkp/kommander/git/kommander/kommander.git
    ```   
 
 4. Set the path of the repo redirectory in an environment variable named REPO_PATH and run the deploy_custom_apps.sh script
 
    ```
    e.g.:
-   export REPO_PATH=$(pwd)/repo
+   export REPO_PATH=$(pwd)/kommander
    ./deploy_custom_apps.sh 
    ``` 
 
